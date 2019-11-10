@@ -1,0 +1,50 @@
+<html>
+<head>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+
+            $('#commentstable').DataTable( {
+                
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    "url": "processed_comments.txt",
+                    "dataType": "jsonp"
+                }
+                "ajax": "",
+
+
+                "dataType": "jsonp",
+                "columns": [
+                    { "data": "body" },
+                    { "data": "url" },
+                    { "data": "interview" }
+                ]
+            } );
+        } );
+    </script>
+
+
+    <table id="commentstable" class="display" style="width:100%; padding:50 50 50 50">
+        <thead>
+            <tr>
+                <th>Comment</th>
+                <th>Source</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+
+</html>
+
+
