@@ -14,7 +14,14 @@
                 "ajax": "processed_comments.txt",
                 "columns": [
                     { "data": "body" },
-                    { "data": "url" },
+                    { "data": "url",
+                      "render": function(data, type, row, meta){
+                                    if(type === 'display'){
+                                        data = '<a href="' + data + '">' + data + '</a>';
+                                    }
+                                    return data;
+                        }              
+                    },
                     { "data": "interview" }
                 ]
             } );
