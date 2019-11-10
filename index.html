@@ -10,19 +10,8 @@
 <body>
     <script>
         $(document).ready(function() {
-
             $('#commentstable').DataTable( {
-                
-                "processing": true,
-                "serverSide": true,
-                "ajax": {
-                    "url": "processed_comments.txt",
-                    "dataType": "jsonp"
-                }
-                "ajax": "",
-
-
-                "dataType": "jsonp",
+                "ajax": "processed_comments.txt",
                 "columns": [
                     { "data": "body" },
                     { "data": "url" },
