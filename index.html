@@ -12,6 +12,7 @@
         $(document).ready(function() {
             $('#commentstable').DataTable( {
                 "ajax": "processed_comments.txt",
+                "paging": false,
                 "columns": [
                     { "data": "body" },
                     { "data": "url",
@@ -29,7 +30,7 @@
     </script>
 
 
-    <table id="commentstable" class="display" style="width:100%; padding:50 50 50 50">
+    <table id="commentstable" class="display" style="width:100%; margin: 50px 50px 50px 50px;">
         <thead>
             <tr>
                 <th>Comment</th>
